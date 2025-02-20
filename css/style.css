@@ -1,0 +1,112 @@
+body {
+  background-color: rgb(157, 157, 157);
+  text-align: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+.backGround {
+  background-color: rgb(225, 225, 225);
+  width: 35rem;
+  border-radius: 4%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px black;
+}
+
+header {
+  img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+  }
+
+  .guide {
+    color: white;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+  }
+
+  .text {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  .word,
+  .greeting,
+  .host {
+    padding-top: 5rem;
+    /* padding-bottom: 3rem; */
+  }
+}
+
+main {
+  .mainOne {
+    margin: 0 auto;
+
+    .title {
+      font-weight: bold;
+    }
+    .calender {
+      width: 35rem;
+
+      .days {
+        gap: 15px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+      }
+      .day {
+        font-weight: bold;
+      }
+      .dates {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 15px 30px;
+      }
+      .date {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .date:hover {
+        background-color: #f0f0f0;
+        border-radius: 25px;
+      }
+
+      .holiday {
+        color: red;
+      }
+      .dDay {
+        background-color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .mainTwo {
+    .countdown-container {
+      margin: 0 auto;
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    #countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      font-size: 20px;
+      font-weight: lighter;
+      color: #333;
+    }
+
+    span {
+      margin: 0 10px;
+    }
+  }
+}
