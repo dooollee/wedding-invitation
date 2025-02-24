@@ -18,23 +18,24 @@ body {
 }
 
 header {
+  .card {
+    position: relative;
+  }
   img {
     display: block;
     width: 100%;
     height: auto;
     border-top-left-radius: 4%;
     border-top-right-radius: 4%;
-    position: relative;
   }
 
   .guide {
     width: inherit;
-    height: 10rem;
     color: white;
     position: absolute;
     left: 0;
     right: 0;
-    top: 1150px;
+    top: 1020px;
     bottom: 0;
   }
 
