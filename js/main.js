@@ -1,3 +1,5 @@
+//<디데이 계산기>
+
 // 목표 날짜 설정 (2025년 5월 31일)
 const targetDate = new Date("2025-05-31T12:30:00");
 
@@ -31,3 +33,41 @@ setInterval(updateCountdown, 1000);
 
 // 페이지 로드 시 카운트다운 초기화
 updateCountdown();
+
+//------------------------------------------------------------//
+
+//<사진 슬라이더>
+
+let currentIndex = 0;
+const slides = document.querySelector(".slides");
+const images = document.querySelectorAll(".slides img");
+const totalSlides = images.length;
+
+const currentSlideElement = document.getElementById("currentSlide");
+const totalSlidesElement = document.getElementById("totalSlides");
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateSlidePosition();
+  updateCounter();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateSlidePosition();
+  updateCounter();
+}
+
+function updateSlidePosition() {
+  const offset = -currentIndex * 100; // 100%를 기준으로 이동
+  slides.style.transform = `translateX(${offset}%)`;
+}
+
+function updateCounter() {
+  currentSlideElement.textContent = currentIndex + 1; // 현재 슬라이드 번호 (1부터 시작)
+}
+
+// 초기 카운터 설정
+totalSlidesElement.textContent = totalSlides;
+updateCounter();
+//-----------------------------------------------------------------------//
