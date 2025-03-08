@@ -1,0 +1,26 @@
+{
+  "name": "wedding-invitation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webp": "simple-webp-converter",
+    "src": "src/wedding photo/*.{png,jpg}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dooollee/wedding-invitation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dooollee/wedding-invitation/issues"
+  },
+  "homepage": "https://github.com/dooollee/wedding-invitation#readme",
+  "devDependencies": {
+    "simple-webp-converter": "^1.0.3"
+  }
+}

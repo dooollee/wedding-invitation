@@ -1,4 +1,13 @@
+@font-face {
+  font-family: "GowunBatang-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
+  font-family: "GoWunBatang-Regular";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,80 +15,100 @@
 
 :root {
   --bg-color: rgb(157, 157, 157);
+  --container-color: white;
 }
 
 body {
   background-color: var(--bg-color);
   text-align: center;
   align-items: center;
-}
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
 .container {
-  background-color: rgb(225, 225, 225);
-  width: 40rem;
-  border-radius: 5%;
-  margin: 10rem auto;
-  box-shadow: 0px 0px 20px black;
+  background-color: var(--container-color);
+  width: 23.125rem;
+  border-radius: 3px;
+  margin: auto;
+  box-shadow: 0rem 0rem 1.25rem black;
 }
 
 header {
   .card {
     position: relative;
   }
+
   img {
     display: block;
     width: 100%;
     height: auto;
-    border-top-left-radius: 4%;
-    border-top-right-radius: 4%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 
   .guide {
-    width: inherit;
     color: white;
     position: absolute;
     left: 0;
     right: 0;
-    top: 1020px;
+    top: 500px;
     bottom: 0;
+
+    p {
+      font-size: 0.9rem;
+      margin: 0.3125rem;
+    }
   }
 
   .text {
-    height: 50rem;
-    padding: 10rem 0;
-  }
-  .word,
-  .greeting,
-  .host {
-    padding-top: 5rem;
-    /* padding-bottom: 3rem; */
+    height: 800px;
+    padding: 160px 0;
+
+    p {
+      font-size: 0.8rem;
+      margin: 10px;
+    }
+
+    div {
+      padding-top: 80px;
+      /* padding-bottom: 48px; */
+    }
   }
 }
 
 main {
-  padding: 5rem 0;
+  padding: 80px 0;
 
   .mainOne {
+    padding: 5rem 0;
+
+    .title {
+      margin-block: 30px;
+    }
+
     .calender {
-      padding: 3rem;
-      width: inherit;
+      font-size: 0.875rem;
+      padding: 2rem;
+      margin-block: 30px;
 
       .days {
-        gap: 15px;
+        gap: 0.625rem;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
+        margin-bottom: 0.625rem;
       }
-      .day {
-        font-weight: bold;
-      }
+
       .dates {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        gap: 15px 30px;
+        gap: 0.625rem;
       }
 
       .date {
-        padding: 8px 4px;
+        padding: 0.5rem 0.25rem;
       }
 
       .holiday {
@@ -87,32 +116,33 @@ main {
       }
 
       .dDay {
-        background-color: white;
+        background-color: lightgray;
         border-radius: 50%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
       }
     }
   }
 
   .countdown-container {
-    margin: 0 auto;
+    margin: 30px auto;
     background-color: white;
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
+    max-width: 25rem;
 
     #countdown {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      font-size: 20px;
+      font-size: 1.25rem;
       font-weight: lighter;
       color: #333;
     }
 
     span {
-      margin: 0 10px;
+      margin: 0 0.625rem;
     }
   }
 
@@ -133,45 +163,114 @@ main {
       }
 
       button {
-        width: 50px;
+        width: 3rem;
+        aspect-ratio: 1/1;
+        object-fit: cover;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        /* transform: translateY(-50%); */
         background-color: transparent;
         border: none;
         cursor: pointer;
         z-index: 1;
         padding: 0;
 
+        &.next {
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 300;
+        }
+
+        &.prev {
+          top: 15.625rem;
+          bottom: 0;
+          right: 0;
+          left: 0;
+        }
+
         img {
+          filter: opacity(60%);
           position: relative;
           width: inherit;
+          height: inherit;
         }
       }
+    }
+    .edit {
+      object-fit: contain;
     }
   }
 
   .counter {
     position: absolute;
-    bottom: 10px;
+    bottom: 0.625rem;
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 18px;
+    font-size: 1.125rem;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 15px;
-    border-radius: 5px;
+    padding: 0.3125rem 0.9375rem;
+    border-radius: 0.3125rem;
   }
 }
 
-.next {
-  left: 360px;
-}
+.map {
+  align-items: center;
 
-.prev {
-  right: 360px;
-}
+  .map-link {
+    display: block;
+    margin-top: 10px;
+    margin-inline: auto;
+    background-color: white;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 10px;
+    inline-size: 60%;
+    align-items: center;
 
-.edit {
-  object-fit: contain;
+    &::before {
+      margin-right: 5px;
+    }
+
+    &.google::before {
+      content: ""; /* 가상 요소를 생성 */
+      display: inline-block; /* 크기 조절을 위해 block 또는 inline-block 사용 */
+      width: 20px; /* 원하는 가로 크기 */
+      aspect-ratio: 1/1; /* 원하는 세로 크기 */
+      background-image: url("/src/map_Icon/googlemap_icon.svg"); /* PNG 이미지 삽입 */
+      background-size: contain; /* 요소 안에서 비율 유지하며 맞춤 */
+      background-repeat: no-repeat; /* 이미지 반복 방지 */
+      background-position: center; /* 이미지를 가운데 정렬 */
+    }
+    &.kakao::before {
+      content: ""; /* 가상 요소를 생성 */
+      display: inline-block; /* 크기 조절을 위해 block 또는 inline-block 사용 */
+      width: 20px; /* 원하는 가로 크기 */
+      aspect-ratio: 1/1; /* 원하는 세로 크기 */
+      background-image: url("/src/map_Icon/kakaomap_icon.svg"); /* PNG 이미지 삽입 */
+      background-size: contain; /* 요소 안에서 비율 유지하며 맞춤 */
+      background-repeat: no-repeat; /* 이미지 반복 방지 */
+      background-position: center; /* 이미지를 가운데 정렬 */
+    }
+    &.naver::before {
+      content: ""; /* 가상 요소를 생성 */
+      display: inline-block; /* 크기 조절을 위해 block 또는 inline-block 사용 */
+      width: 20px; /* 원하는 가로 크기 */
+      aspect-ratio: 1/1; /* 원하는 세로 크기 */
+      background-image: url("/src/map_Icon/navermap_icon.svg"); /* PNG 이미지 삽입 */
+      background-size: contain; /* 요소 안에서 비율 유지하며 맞춤 */
+      background-repeat: no-repeat; /* 이미지 반복 방지 */
+      background-position: center; /* 이미지를 가운데 정렬 */
+    }
+  }
+
+  .wrap_controllers {
+    display: none;
+  }
+
+  .map-from-internet {
+    margin-inline: 0.3125rem;
+    margin-block: 0.9375rem;
+  }
 }
