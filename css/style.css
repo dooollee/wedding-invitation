@@ -55,6 +55,45 @@ body {
   box-shadow: 0rem 0rem 0.8rem black;
 }
 
+.music-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.music-button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+.music-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* 음악 재생/일시정지 아이콘 스타일 */
+.play-icon,
+.pause-icon {
+  display: none;
+}
+
+.play-icon.active,
+.pause-icon.active {
+  display: block;
+}
+
 header {
   .card {
     padding-bottom: 20px;
@@ -76,7 +115,7 @@ header {
       display: flex;
       justify-content: space-between;
       padding-inline: 20px;
-      color: white;
+      color: gray;
       font-size: 12px;
     }
 
@@ -91,14 +130,11 @@ header {
 
     .guide {
       margin-top: 15px;
-      font-family: "SokchoBadaDotum";
-      color: #777777;
+      font-family: "Cafe24ClassicType-Regular";
       letter-spacing: 0.06rem;
-      /* -webkit-text-stroke: 0.5px black; */
-
-      p {
-        font-size: 0.9rem;
-      }
+      background: linear-gradient(to right, black, gray, white);
+      color: transparent;
+      -webkit-background-clip: text;
     }
   }
 
@@ -108,9 +144,30 @@ header {
     justify-content: space-between;
     height: 800px;
     padding: 160px 0;
+    gap: 15px;
 
     p {
-      margin: 10px;
+      margin-block: 5px;
+    }
+
+    .call {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-block: 10px;
+      gap: 10px;
+    }
+
+    a {
+      display: inline-flex;
+      vertical-align: text-top;
+    }
+    img {
+      vertical-align: text-top;
+    }
+
+    .host {
+      letter-spacing: 0.1rem;
     }
   }
 }
@@ -176,6 +233,10 @@ main {
   }
 
   .mainTwo {
+    .flower {
+      width: 15%;
+    }
+
     .gallery {
       padding: 15px;
       display: grid;
@@ -316,6 +377,11 @@ main {
     color: #5a4e41;
     border: 1px solid #ece3c0;
     max-width: 500px;
+
+    img {
+      display: inline;
+      vertical-align: text-top;
+    }
   }
 
   .toggle-btn {
@@ -433,37 +499,23 @@ main {
 
     &::before {
       margin-right: 5px;
+      content: ""; /* 가상 요소를 생성 */
+      display: inline-block; /* 크기 조절을 위해 block 또는 inline-block 사용 */
+      width: 20px; /* 원하는 가로 크기 */
+      aspect-ratio: 1/1; /* 원하는 세로 크기 */
+      background-size: contain; /* 요소 안에서 비율 유지하며 맞춤 */
+      background-repeat: no-repeat; /* 이미지 반복 방지 */
+      background-position: center; /* 이미지를 가운데 정렬 */
     }
 
     &.Tmap::before {
-      content: ""; /* 가상 요소를 생성 */
-      display: inline-block; /* 크기 조절을 위해 block 또는 inline-block 사용 */
-      width: 20px; /* 원하는 가로 크기 */
-      aspect-ratio: 1/1; /* 원하는 세로 크기 */
-      background-image: url("/src/map_Icon/Tmap.png"); /* PNG 이미지 삽입 */
-      background-size: contain; /* 요소 안에서 비율 유지하며 맞춤 */
-      background-repeat: no-repeat; /* 이미지 반복 방지 */
-      background-position: center; /* 이미지를 가운데 정렬 */
+      background-image: url("../src/map_Icon/Tmap.png"); /* PNG 이미지 삽입 */
     }
     &.kakao::before {
-      content: ""; /* 가상 요소를 생성 */
-      display: inline-block; /* 크기 조절을 위해 block 또는 inline-block 사용 */
-      width: 20px; /* 원하는 가로 크기 */
-      aspect-ratio: 1/1; /* 원하는 세로 크기 */
-      background-image: url("/src/map_Icon/kakaomap_icon.svg"); /* PNG 이미지 삽입 */
-      background-size: contain; /* 요소 안에서 비율 유지하며 맞춤 */
-      background-repeat: no-repeat; /* 이미지 반복 방지 */
-      background-position: center; /* 이미지를 가운데 정렬 */
+      background-image: url("../src/map_Icon/kakaomap_icon.svg"); /* PNG 이미지 삽입 */
     }
     &.naver::before {
-      content: ""; /* 가상 요소를 생성 */
-      display: inline-block; /* 크기 조절을 위해 block 또는 inline-block 사용 */
-      width: 20px; /* 원하는 가로 크기 */
-      aspect-ratio: 1/1; /* 원하는 세로 크기 */
-      background-image: url("/src/map_Icon/navermap_icon.svg"); /* PNG 이미지 삽입 */
-      background-size: contain; /* 요소 안에서 비율 유지하며 맞춤 */
-      background-repeat: no-repeat; /* 이미지 반복 방지 */
-      background-position: center; /* 이미지를 가운데 정렬 */
+      background-image: url("../src/map_Icon/navermap_icon.svg"); /* PNG 이미지 삽입 */
     }
   }
 
@@ -472,7 +524,6 @@ main {
   }
 
   .map-from-internet {
-    margin-inline: 0.3125rem;
     margin-block: 0.9375rem;
   }
 }
