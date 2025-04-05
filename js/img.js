@@ -1,23 +1,11 @@
-const img = new Image();
-img.src = "../src/wedding photo/flies/1.webp";
-img.src = "../src/wedding photo/flies/2.webp";
-img.src = "../src/wedding photo/flies/3.webp";
-img.src = "../src/wedding photo/flies/4.webp";
-img.src = "../src/wedding photo/flies/5.webp";
-img.src = "../src/wedding photo/flies/6.webp";
-img.src = "../src/wedding photo/flies/7.webp";
-img.src = "../src/wedding photo/flies/8.webp";
-img.src = "../src/wedding photo/flies/9.webp";
-img.src = "../src/wedding photo/flies/10.webp";
-img.src = "../src/wedding photo/flies/11.webp";
-img.src = "../src/wedding photo/flies/12.webp";
-img.src = "../src/wedding photo/flies/13.webp";
-img.src = "../src/wedding photo/flies/14.webp";
-img.src = "../src/wedding photo/flies/15.webp";
-img.src = "../src/wedding photo/flies/16.webp";
-img.src = "../src/wedding photo/flies/17.webp";
-img.src = "../src/wedding photo/flies/18.webp";
-img.src = "../src/wedding photo/flies/19.webp";
-img.src = "../src/wedding photo/flies/20.webp";
-img.src = "../src/wedding photo/flies/21.webp";
-img.src = "../src/wedding photo/flies/22.webp";
+document.addEventListener("DOMContentLoaded", function () {
+  const showMoreBtn = document.getElementById("show-more-btn");
+  const hiddenGallery = document.getElementById("hidden-gallery");
+
+  showMoreBtn.addEventListener("click", function () {
+    // 숨겨진 갤러리를 표시
+    hiddenGallery.style.display = "contents";
+    // 버튼 숨기기 (또는 필요시 다른 동작으로 변경)
+    showMoreBtn.style.display = "none";
+  });
+});

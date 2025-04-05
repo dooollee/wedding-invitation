@@ -58,7 +58,7 @@ body {
 .music-button {
   position: fixed;
   top: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 1000;
   width: 40px;
   height: 40px;
@@ -238,6 +238,7 @@ main {
     }
 
     .gallery {
+      width: 100%;
       padding: 15px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
