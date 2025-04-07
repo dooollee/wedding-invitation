@@ -181,44 +181,34 @@
         </section>
         <section class="mainTwo">
           <h2 class="show">gallery</h2>
-          <div class="gallery-container">
-           <div class="gallery-header">
-             <div class="gallery-pagination">
-               <span id="current-page">1</span> / <span id="total-pages">3</span>
-             </div>
-           </div>
-
-           <div class="gallery-content">
-             <button class="gallery-nav-button prev-button" aria-label="이전 페이지">
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                 <polyline points="15 18 9 12 15 6"></polyline>
-               </svg>
-             </button>
-
-             <div class="gallery-grid" id="gallery-grid">
-               <!-- 이미지는 JavaScript에서 동적으로 추가됩니다 -->
-             </div>
-
-             <button class="gallery-nav-button next-button" aria-label="다음 페이지">
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                 <polyline points="9 18 15 12 9 6"></polyline>
-               </svg>
-             </button>
-           </div>
-
-           <div class="gallery-indicators" id="indicators">
-             <!-- 인디케이터는 JavaScript에서 동적으로 추가됩니다 -->
-           </div>
-         </div>
-
-          <!-- 모달 창 -->
-          <div id="imageModal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div class="modal-container">
-            <button class="nav-button prev" onclick="changeImage(-1)">&#10094;</button>
-            <img class="modal-content" id="modalImage">
-            <button class="nav-button next" onclick="changeImage(1)">&#10095;</button>
-            <div class="image-counter" id="imageCounter">1 / 9</div>
+            <div class="gallery-container">
+            <div class="gallery-header">
+              <h2 class="gallery-title">사진 갤러리</h2>
+              <div class="gallery-pagination">
+                <span id="current-page">1</span> / <span id="total-pages">3</span> 페이지
+              </div>
+            </div>
+            
+            <div class="gallery-content">
+              <button class="gallery-nav-button prev-button" aria-label="이전 페이지">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              
+              <div class="gallery-grid" id="gallery-grid">
+                <!-- 이미지는 JavaScript에서 동적으로 추가됩니다 -->
+              </div>
+              
+              <button class="gallery-nav-button next-button" aria-label="다음 페이지">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="gallery-indicators" id="indicators">
+              <!-- 인디케이터는 JavaScript에서 동적으로 추가됩니다 -->
             </div>
           </div>
           <!-- 예배 안내  -->

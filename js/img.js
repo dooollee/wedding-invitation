@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 이미지 데이터 배열 (실제로는 서버에서 가져올 수 있습니다)
-  const images = Array.from({ length: 22 }, (_, i) => ({
+  const images = Array.from({ length: 27 }, (_, i) => ({
     id: i + 1,
-    src: `./src/webp/${i + 1}.webp`,
-
+    src: `../src/file/${i + 1}.webp`, // 다양한 크기의 이미지
     alt: `이미지 ${i + 1}`,
   }));
 
@@ -19,6 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const imagesPerPage = 9;
   let currentPage = 0;
   const totalPages = Math.ceil(images.length / imagesPerPage);
+
+  // 이미지 모달 인스턴스 생성
+  // createImageModal 함수가 window 객체에 등록되어 있는지 확인
+  let imageModal;
+  if (typeof window.createImageModal === "function") {
+    imageModal = window.createImageModal();
+  } else {
+    console.error("modal.js가 올바르게 로드되지 않았습니다.");
+    // 모달 없이도 갤러리는 작동하도록 함
+  }
 
   // 총 페이지 수 표시
   totalPagesElement.textContent = totalPages;
@@ -41,6 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const img = document.createElement("img");
       img.src = image.src;
       img.alt = image.alt;
+
+      // 이미지 클릭 이벤트 - 모달 열기
+      img.addEventListener("click", function () {
+        const clickedIndex = i;
+        if (imageModal) {
+          imageModal.open(images, clickedIndex - startIndex);
+        }
+      });
 
       item.appendChild(img);
       galleryGrid.appendChild(item);
