@@ -316,11 +316,11 @@ main {
     }
 
     .prev-button {
-      left: -20px;
+      left: 5px;
     }
 
     .next-button {
-      right: -20px;
+      right: 5px;
     }
 
     .gallery-indicators {

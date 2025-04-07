@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 이미지 데이터 배열 (실제로는 서버에서 가져올 수 있습니다)
   const images = Array.from({ length: 22 }, (_, i) => ({
     id: i + 1,
-    src: `../src/webp/${i + 1}.webp`,
+    src: `./src/webp/${i + 1}.webp`,
 
     alt: `이미지 ${i + 1}`,
   }));
