@@ -241,7 +241,7 @@ main {
       width: 100%;
       padding: 15px;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 15px;
     }
 
@@ -253,6 +253,28 @@ main {
       width: 100%;
       object-fit: cover;
       display: block;
+    }
+
+    /* 숨김 클래스 */
+    .hidden {
+      display: none;
+    }
+
+    /* 더보기 버튼 스타일 */
+    .load-more-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .load-more-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      color: #5a4e41;
     }
 
     /* 모달 스타일 */

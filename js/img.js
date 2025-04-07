@@ -1,11 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const showMoreBtn = document.getElementById("show-more-btn");
-  const hiddenGallery = document.getElementById("hidden-gallery");
+  // 더보기 버튼 요소 가져오기
+  const loadMoreBtn = document.getElementById("loadMoreBtn");
+  // 더 보여줄 갤러리 요소 가져오기
+  const galleryMore = document.getElementById("gallery-more");
 
-  showMoreBtn.addEventListener("click", function () {
-    // 숨겨진 갤러리를 표시
-    hiddenGallery.style.display = "contents";
-    // 버튼 숨기기 (또는 필요시 다른 동작으로 변경)
-    showMoreBtn.style.display = "none";
+  // 더보기 버튼 클릭 이벤트 리스너
+  loadMoreBtn.addEventListener("click", function () {
+    // 숨겨진 갤러리를 보이게 함
+    galleryMore.classList.remove("hidden");
+    // 갤러리를 보이게 한 후 버튼은 숨김
+    loadMoreBtn.classList.add("hidden");
+
+    // 화면 스크롤을 부드럽게 아래로 이동
+    window.scrollBy({
+      top: 100,
+      behavior: "smooth",
+    });
   });
 });

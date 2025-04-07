@@ -26,7 +26,7 @@
     <script src="./js/modal.js"></script>
     <script src="./js/account.js"></script>
     <script src="./js/music.js"></script>
-    <!-- <script src="./js/img.js"></script> -->
+    <script src="./js/img.js"></script>
   </head>
   <body>
     <div class="container">
@@ -168,31 +168,41 @@
         </div>
         </section>
         <section class="mainTwo">
-          <h2 class="show">gallery</h2>
-          <div class="gallery" id="gallery">
-            <div class="gallery-item"><img src="./src/wedding photo/files/1.webp" loading="eager" alt="사진 1"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/2.webp" loading="eager" alt="사진 2"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/3.webp" loading="eager" alt="사진 3"></div>
-            <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/4.webp" loading="eager" alt="사진 4"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/5.webp" loading="eager" alt="사진 5"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/6.webp" loading="eager" alt="사진 6"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/7.webp" loading="eager" alt="사진 7"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/8.webp" loading="eager" alt="사진 8"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/9.webp" loading="eager" alt="사진 9"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/10.webp" loading="eager" alt="사진 10"></div>
-            <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/11.webp" loading="eager" alt="사진 11"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/12.webp" loading="eager" alt="사진 12"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/13.webp" loading="eager" alt="사진 13"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/14.webp" loading="eager" alt="사진 14"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/15.webp" loading="eager" alt="사진 15"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/16.webp" loading="eager" alt="사진 16"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/17.webp" loading="eager" alt="사진 17"></div>
-            <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/18.webp" loading="eager" alt="사진 18"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/19.webp" loading="eager" alt="사진 19"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/20.webp" loading="eager" alt="사진 20"></div>
-            <div class="gallery-item"><img src="./src/wedding photo/files/21.webp" loading="eager" alt="사진 21"></div>
-            <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/22.webp" loading="eager" alt="사진 22"></div>
-          </div>
+        <h2 class="show">gallery</h2>
+        <div class="gallery" id="gallery">
+          <!-- 처음 9개 이미지 -->
+          <div class="gallery-item"><img src="./src/wedding photo/files/1.webp" loading="eager" alt="사진 1"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/2.webp" loading="eager" alt="사진 2"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/3.webp" loading="eager" alt="사진 3"></div>
+          <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/4.webp" loading="eager" alt="사진 4"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/5.webp" loading="eager" alt="사진 5"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/6.webp" loading="eager" alt="사진 6"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/7.webp" loading="eager" alt="사진 7"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/8.webp" loading="eager" alt="사진 8"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/9.webp" loading="eager" alt="사진 9"></div>
+        </div>
+        
+        <!-- 더보기 버튼 -->
+        <div class="load-more-container">
+          <button id="loadMoreBtn" class="load-more-btn">사진 더보기</button>
+        </div>
+        
+        <!-- 나머지 이미지들을 담을 숨겨진 갤러리 -->
+        <div class="gallery hidden" id="gallery-more">
+          <div class="gallery-item"><img src="./src/wedding photo/files/10.webp" loading="lazy" alt="사진 10"></div>
+          <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/11.webp" loading="lazy" alt="사진 11"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/12.webp" loading="lazy" alt="사진 12"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/13.webp" loading="lazy" alt="사진 13"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/14.webp" loading="lazy" alt="사진 14"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/15.webp" loading="lazy" alt="사진 15"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/16.webp" loading="lazy" alt="사진 16"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/17.webp" loading="lazy" alt="사진 17"></div>
+          <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/18.webp" loading="lazy" alt="사진 18"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/19.webp" loading="lazy" alt="사진 19"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/20.webp" loading="lazy" alt="사진 20"></div>
+          <div class="gallery-item"><img src="./src/wedding photo/files/21.webp" loading="lazy" alt="사진 21"></div>
+          <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/22.webp" loading="lazy" alt="사진 22"></div>
+        </div>
           <!-- 모달 창 -->
           <div id="imageModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
