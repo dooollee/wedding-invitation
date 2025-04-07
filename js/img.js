@@ -1,51 +1,107 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // 요소들 가져오기
-  const loadMoreBtn = document.getElementById("loadMoreBtn");
-  const loadMoreContainer = document.getElementById("loadMoreContainer");
-  const galleryMore1 = document.getElementById("gallery-more1");
-  const galleryMore2 = document.getElementById("gallery-more2");
+  // 이미지 데이터 배열 (실제로는 서버에서 가져올 수 있습니다)
+  const images = Array.from({ length: 22 }, (_, i) => ({
+    id: i + 1,
+    src: `../src/webp/${i + 1}.webp`,
 
-  // 더보기 버튼 클릭 이벤트
-  loadMoreBtn.addEventListener("click", function () {
-    // 현재 단계 확인
-    const currentStep = parseInt(loadMoreBtn.getAttribute("data-step"));
+    alt: `이미지 ${i + 1}`,
+  }));
 
-    if (currentStep === 1) {
-      // 첫 번째 클릭: 첫 번째 추가 이미지 그룹 표시
-      galleryMore1.classList.remove("hidden");
+  // DOM 요소
+  const galleryGrid = document.getElementById("gallery-grid");
+  const prevButton = document.querySelector(".prev-button");
+  const nextButton = document.querySelector(".next-button");
+  const indicators = document.getElementById("indicators");
+  const currentPageElement = document.getElementById("current-page");
+  const totalPagesElement = document.getElementById("total-pages");
 
-      // 현재 단계 업데이트
-      loadMoreBtn.setAttribute("data-step", "2");
+  // 설정
+  const imagesPerPage = 9;
+  let currentPage = 0;
+  const totalPages = Math.ceil(images.length / imagesPerPage);
 
-      // 페이지 레이아웃 재조정 (브라우저 리플로우 강제)
-      void galleryMore1.offsetHeight;
-    } else if (currentStep === 2) {
-      // 두 번째 클릭: 두 번째 추가 이미지 그룹 표시
-      galleryMore2.classList.remove("hidden");
+  // 총 페이지 수 표시
+  totalPagesElement.textContent = totalPages;
 
-      // 더보기 버튼 컨테이너 숨기기 (모든 이미지가 표시됨)
-      loadMoreContainer.classList.add("hidden");
+  // 이미지 표시 함수
+  function displayImages() {
+    // 갤러리 초기화
+    galleryGrid.innerHTML = "";
 
-      // 페이지 레이아웃 재조정
-      void galleryMore2.offsetHeight;
+    // 현재 페이지에 표시할 이미지 계산
+    const startIndex = currentPage * imagesPerPage;
+    const endIndex = Math.min(startIndex + imagesPerPage, images.length);
+
+    // 이미지 추가
+    for (let i = startIndex; i < endIndex; i++) {
+      const image = images[i];
+      const item = document.createElement("div");
+      item.className = "gallery-item";
+
+      const img = document.createElement("img");
+      img.src = image.src;
+      img.alt = image.alt;
+
+      item.appendChild(img);
+      galleryGrid.appendChild(item);
     }
 
-    // 페이지를 부드럽게 스크롤하여 새로 추가된 콘텐츠가 보이도록 함
-    if (currentStep === 1) {
-      const newContent = galleryMore1.firstElementChild;
-      if (newContent) {
-        const rect = newContent.getBoundingClientRect();
-        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+    // 현재 페이지 업데이트
+    currentPageElement.textContent = currentPage + 1;
 
-        if (!isVisible) {
-          setTimeout(() => {
-            window.scrollBy({
-              top: rect.height / 2,
-              behavior: "smooth",
-            });
-          }, 100);
-        }
+    // 인디케이터 업데이트
+    updateIndicators();
+  }
+
+  // 인디케이터 생성
+  function createIndicators() {
+    indicators.innerHTML = "";
+
+    for (let i = 0; i < totalPages; i++) {
+      const indicator = document.createElement("div");
+      indicator.className = "indicator";
+      if (i === currentPage) {
+        indicator.classList.add("active");
       }
+
+      indicator.addEventListener("click", () => {
+        currentPage = i;
+        displayImages();
+      });
+
+      indicators.appendChild(indicator);
     }
-  });
+  }
+
+  // 인디케이터 업데이트
+  function updateIndicators() {
+    const indicatorElements = indicators.querySelectorAll(".indicator");
+    indicatorElements.forEach((indicator, index) => {
+      if (index === currentPage) {
+        indicator.classList.add("active");
+      } else {
+        indicator.classList.remove("active");
+      }
+    });
+  }
+
+  // 이전 페이지로 이동
+  function goToPrevPage() {
+    currentPage = currentPage > 0 ? currentPage - 1 : totalPages - 1;
+    displayImages();
+  }
+
+  // 다음 페이지로 이동
+  function goToNextPage() {
+    currentPage = currentPage < totalPages - 1 ? currentPage + 1 : 0;
+    displayImages();
+  }
+
+  // 이벤트 리스너 설정
+  prevButton.addEventListener("click", goToPrevPage);
+  nextButton.addEventListener("click", goToNextPage);
+
+  // 초기화
+  createIndicators();
+  displayImages();
 });

@@ -181,46 +181,35 @@
         </section>
         <section class="mainTwo">
           <h2 class="show">gallery</h2>
-          <div id="gallery-container">
-            <!-- 처음 9개 이미지 -->
-            <div class="gallery" id="gallery">
-              <div class="gallery-item"><img src="./src/webp/1.webp" loading="eager" alt="사진 1"></div>
-              <div class="gallery-item"><img src="./src/webp/2.webp" loading="eager" alt="사진 2"></div>
-              <div class="gallery-item"><img src="./src/webp/3.webp" loading="eager" alt="사진 3"></div>
-              <div class="gallery-item"><img class="edit" src="./src/webp/4.webp" loading="eager" alt="사진 4"></div>
-              <div class="gallery-item"><img src="./src/webp/5.webp" loading="eager" alt="사진 5"></div>
-              <div class="gallery-item"><img src="./src/webp/6.webp" loading="eager" alt="사진 6"></div>
-              <div class="gallery-item"><img src="./src/webp/7.webp" loading="eager" alt="사진 7"></div>
-              <div class="gallery-item"><img src="./src/webp/8.webp" loading="eager" alt="사진 8"></div>
-              <div class="gallery-item"><img src="./src/webp/9.webp" loading="eager" alt="사진 9"></div>
-            </div>
-          
-            <!-- 두 번째 그룹 이미지들 (첫 번째 더보기 클릭 시 표시) -->
-            <div class="gallery hidden no-margin" id="gallery-more1">
-              <div class="gallery-item"><img src="./src/webp/10.webp" loading="lazy" alt="사진 10"></div>
-              <div class="gallery-item"><img class="edit" src="./src/webp/11.webp" loading="lazy" alt="사진 11"></div>
-              <div class="gallery-item"><img src="./src/webp/12.webp" loading="lazy" alt="사진 12"></div>
-              <div class="gallery-item"><img src="./src/webp/13.webp" loading="lazy" alt="사진 13"></div>
-              <div class="gallery-item"><img src="./src/webp/14.webp" loading="lazy" alt="사진 14"></div>
-              <div class="gallery-item"><img src="./src/webp/15.webp" loading="lazy" alt="사진 15"></div>
-            </div>
-          
-            <!-- 세 번째 그룹 이미지들 (두 번째 더보기 클릭 시 표시) -->
-            <div class="gallery hidden no-margin" id="gallery-more2">
-              <div class="gallery-item"><img src="./src/webp/16.webp" loading="lazy" alt="사진 16"></div>
-              <div class="gallery-item"><img src="./src/webp/17.webp" loading="lazy" alt="사진 17"></div>
-              <div class="gallery-item"><img class="edit" src="./src/webp/18.webp" loading="lazy" alt="사진 18"></div>
-              <div class="gallery-item"><img src="./src/webp/19.webp" loading="lazy" alt="사진 19"></div>
-              <div class="gallery-item"><img src="./src/webp/20.webp" loading="lazy" alt="사진 20"></div>
-              <div class="gallery-item"><img src="./src/webp/21.webp" loading="lazy" alt="사진 21"></div>
-              <div class="gallery-item"><img class="edit" src="./src/webp/22.webp" loading="lazy" alt="사진 22"></div>
-            </div>
-          
-            <!-- 더보기 버튼 - 항상 갤러리 컨테이너 맨 아래에 위치 -->
-            <div class="load-more-container" id="loadMoreContainer">
-              <button id="loadMoreBtn" class="load-more-btn" data-step="1">show more</button>
-            </div>
-          </div>
+          <div class="gallery-container">
+           <div class="gallery-header">
+             <div class="gallery-pagination">
+               <span id="current-page">1</span> / <span id="total-pages">3</span>
+             </div>
+           </div>
+
+           <div class="gallery-content">
+             <button class="gallery-nav-button prev-button" aria-label="이전 페이지">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                 <polyline points="15 18 9 12 15 6"></polyline>
+               </svg>
+             </button>
+
+             <div class="gallery-grid" id="gallery-grid">
+               <!-- 이미지는 JavaScript에서 동적으로 추가됩니다 -->
+             </div>
+
+             <button class="gallery-nav-button next-button" aria-label="다음 페이지">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                 <polyline points="9 18 15 12 9 6"></polyline>
+               </svg>
+             </button>
+           </div>
+
+           <div class="gallery-indicators" id="indicators">
+             <!-- 인디케이터는 JavaScript에서 동적으로 추가됩니다 -->
+           </div>
+         </div>
 
           <!-- 모달 창 -->
           <div id="imageModal" class="modal">

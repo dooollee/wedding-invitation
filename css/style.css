@@ -243,51 +243,103 @@ main {
       width: 15%;
     }
 
-    .gallery {
-      width: 100%;
-      padding: 15px;
+    .gallery-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .gallery-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .gallery-pagination {
+      font-size: 14px;
+    }
+
+    .gallery-content {
+      position: relative;
+    }
+
+    .gallery-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 15px;
+      gap: 16px;
+      transition: transform 0.4s ease;
     }
 
     .gallery-item {
-      margin-block: auto;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 8px;
     }
 
     .gallery-item img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
-      display: block;
+      transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
-    /* 숨김 클래스 */
-    .hidden {
-      display: none !important;
+    .gallery-item img:hover {
+      transform: scale(1.05);
     }
 
-    /* 여백 제거 클래스 */
-    .no-margin {
-      margin-top: 0;
-      padding-top: 0;
+    .gallery-nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      border: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
     }
 
-    /* 더보기 버튼 스타일 */
-    .load-more-container {
-      width: 100%;
+    .gallery-nav-button:focus {
+      outline: none;
+    }
+
+    .prev-button {
+      left: -20px;
+    }
+
+    .next-button {
+      right: -20px;
+    }
+
+    .gallery-indicators {
       display: flex;
       justify-content: center;
-      margin: 15px 0;
-      order: 999; /* 항상 컨테이너의 마지막에 위치하도록 */
+      margin-top: 16px;
+      gap: 5px;
     }
 
-    .load-more-btn {
-      color: #ece3c0;
-      background-color: transparent;
-      border: none;
+    .indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #ddd;
       cursor: pointer;
-      font-size: 14px;
-      transition: all 0.3s ease;
+    }
+
+    .indicator.active {
+      background-color: #1e90ff;
     }
 
     /* 모달 스타일 */
