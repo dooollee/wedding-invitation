@@ -144,7 +144,13 @@ header {
     justify-content: space-between;
     height: 800px;
     padding: 160px 0;
-    gap: 15px;
+    gap: 40px;
+    font-size: 14px;
+
+    .word {
+      color: #5a4e41;
+      font-weight: 600;
+    }
 
     p {
       margin-block: 5px;
@@ -257,7 +263,13 @@ main {
 
     /* 숨김 클래스 */
     .hidden {
-      display: none;
+      display: none !important;
+    }
+
+    /* 여백 제거 클래스 */
+    .no-margin {
+      margin-top: 0;
+      padding-top: 0;
     }
 
     /* 더보기 버튼 스타일 */
@@ -265,16 +277,17 @@ main {
       width: 100%;
       display: flex;
       justify-content: center;
-      margin: 20px 0;
+      margin: 15px 0;
+      order: 999; /* 항상 컨테이너의 마지막에 위치하도록 */
     }
 
     .load-more-btn {
+      color: #ece3c0;
       background-color: transparent;
       border: none;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 14px;
       transition: all 0.3s ease;
-      color: #5a4e41;
     }
 
     /* 모달 스타일 */
