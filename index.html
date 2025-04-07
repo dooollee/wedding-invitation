@@ -52,7 +52,7 @@
             <h1>Wedding Day</h1>
             <h3>05.31</h3>
           </div>
-          <img src="./src/wedding photo/files/9.webp" alt="메인 이미지" />
+          <img src="./src/webp/9.webp" alt="메인 이미지" />
 
           <div class="intro">
            <span>HyeonBin</span><span>HanE</span>
@@ -65,16 +65,28 @@
         </section>
         <section class="text">
           <h2 class="show">invite</h2>
-          <div class=" show">
-            <p>나의 사랑하는 자가 내게 말하여 이르기를</p>
-            <p>나의 사랑, 내 어여쁜 자야 일어나서 함께 가자</p>
-            <p>아가서 2장 10절</p>
+          <div class="word show">
+            <p>
+              이러므로 사람이 부모를 떠나그 아내와 합하여<br>
+              그 둘이 한 육체가 될찌니 이 비밀이 크도다<br>
+              내가 그리스도와 교회에 대하여 말하노라.<br>
+              <br>
+              에베소서 5장 31~32장
+          </p>
           </div>
 
           <div class=" show">
-            <p>두 사람이 하나되어 언약의 가정을 이루고자 합니다.</p>
-            <p>하나님 앞에서 아름다운 서약을 맺고자 함이니</p>
-            <p>귀한 발걸음으로 축복해 주시면 감사하겠습니다.</p>
+            <p>
+              결혼은 언약을 이행하는<br> 
+              그리스도의 자비로운 사랑과<br>
+              그분 신부의 신실함을<br> 
+              보여주기 위해 존재합니다.<br>
+              <br>
+              저희 둘이 만나 남편과 아내로서, <br>
+              그리스도와 교회의 모습을 비추고자 합니다.<br>
+              이 맹세의 증인으로 함께해주시면 감사하겠습니다.<br>
+            <p>
+            
           </div>
 
           <div class="host show">  
@@ -168,41 +180,48 @@
         </div>
         </section>
         <section class="mainTwo">
-        <h2 class="show">gallery</h2>
-        <div class="gallery" id="gallery">
-          <!-- 처음 9개 이미지 -->
-          <div class="gallery-item"><img src="./src/wedding photo/files/1.webp" loading="eager" alt="사진 1"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/2.webp" loading="eager" alt="사진 2"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/3.webp" loading="eager" alt="사진 3"></div>
-          <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/4.webp" loading="eager" alt="사진 4"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/5.webp" loading="eager" alt="사진 5"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/6.webp" loading="eager" alt="사진 6"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/7.webp" loading="eager" alt="사진 7"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/8.webp" loading="eager" alt="사진 8"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/9.webp" loading="eager" alt="사진 9"></div>
-        </div>
-        
-        <!-- 더보기 버튼 -->
-        <div class="load-more-container">
-          <button id="loadMoreBtn" class="load-more-btn">사진 더보기</button>
-        </div>
-        
-        <!-- 나머지 이미지들을 담을 숨겨진 갤러리 -->
-        <div class="gallery hidden" id="gallery-more">
-          <div class="gallery-item"><img src="./src/wedding photo/files/10.webp" loading="lazy" alt="사진 10"></div>
-          <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/11.webp" loading="lazy" alt="사진 11"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/12.webp" loading="lazy" alt="사진 12"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/13.webp" loading="lazy" alt="사진 13"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/14.webp" loading="lazy" alt="사진 14"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/15.webp" loading="lazy" alt="사진 15"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/16.webp" loading="lazy" alt="사진 16"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/17.webp" loading="lazy" alt="사진 17"></div>
-          <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/18.webp" loading="lazy" alt="사진 18"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/19.webp" loading="lazy" alt="사진 19"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/20.webp" loading="lazy" alt="사진 20"></div>
-          <div class="gallery-item"><img src="./src/wedding photo/files/21.webp" loading="lazy" alt="사진 21"></div>
-          <div class="gallery-item"><img class="edit" src="./src/wedding photo/files/22.webp" loading="lazy" alt="사진 22"></div>
-        </div>
+          <h2 class="show">gallery</h2>
+          <div id="gallery-container">
+            <!-- 처음 9개 이미지 -->
+            <div class="gallery" id="gallery">
+              <div class="gallery-item"><img src="./src/webp/1.webp" loading="eager" alt="사진 1"></div>
+              <div class="gallery-item"><img src="./src/webp/2.webp" loading="eager" alt="사진 2"></div>
+              <div class="gallery-item"><img src="./src/webp/3.webp" loading="eager" alt="사진 3"></div>
+              <div class="gallery-item"><img class="edit" src="./src/webp/4.webp" loading="eager" alt="사진 4"></div>
+              <div class="gallery-item"><img src="./src/webp/5.webp" loading="eager" alt="사진 5"></div>
+              <div class="gallery-item"><img src="./src/webp/6.webp" loading="eager" alt="사진 6"></div>
+              <div class="gallery-item"><img src="./src/webp/7.webp" loading="eager" alt="사진 7"></div>
+              <div class="gallery-item"><img src="./src/webp/8.webp" loading="eager" alt="사진 8"></div>
+              <div class="gallery-item"><img src="./src/webp/9.webp" loading="eager" alt="사진 9"></div>
+            </div>
+          
+            <!-- 두 번째 그룹 이미지들 (첫 번째 더보기 클릭 시 표시) -->
+            <div class="gallery hidden no-margin" id="gallery-more1">
+              <div class="gallery-item"><img src="./src/webp/10.webp" loading="lazy" alt="사진 10"></div>
+              <div class="gallery-item"><img class="edit" src="./src/webp/11.webp" loading="lazy" alt="사진 11"></div>
+              <div class="gallery-item"><img src="./src/webp/12.webp" loading="lazy" alt="사진 12"></div>
+              <div class="gallery-item"><img src="./src/webp/13.webp" loading="lazy" alt="사진 13"></div>
+              <div class="gallery-item"><img src="./src/webp/14.webp" loading="lazy" alt="사진 14"></div>
+              <div class="gallery-item"><img src="./src/webp/15.webp" loading="lazy" alt="사진 15"></div>
+            </div>
+          
+            <!-- 세 번째 그룹 이미지들 (두 번째 더보기 클릭 시 표시) -->
+            <div class="gallery hidden no-margin" id="gallery-more2">
+              <div class="gallery-item"><img src="./src/webp/16.webp" loading="lazy" alt="사진 16"></div>
+              <div class="gallery-item"><img src="./src/webp/17.webp" loading="lazy" alt="사진 17"></div>
+              <div class="gallery-item"><img class="edit" src="./src/webp/18.webp" loading="lazy" alt="사진 18"></div>
+              <div class="gallery-item"><img src="./src/webp/19.webp" loading="lazy" alt="사진 19"></div>
+              <div class="gallery-item"><img src="./src/webp/20.webp" loading="lazy" alt="사진 20"></div>
+              <div class="gallery-item"><img src="./src/webp/21.webp" loading="lazy" alt="사진 21"></div>
+              <div class="gallery-item"><img class="edit" src="./src/webp/22.webp" loading="lazy" alt="사진 22"></div>
+            </div>
+          
+            <!-- 더보기 버튼 - 항상 갤러리 컨테이너 맨 아래에 위치 -->
+            <div class="load-more-container" id="loadMoreContainer">
+              <button id="loadMoreBtn" class="load-more-btn" data-step="1">show more</button>
+            </div>
+          </div>
+
           <!-- 모달 창 -->
           <div id="imageModal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
