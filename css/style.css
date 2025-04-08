@@ -244,16 +244,17 @@ main {
     }
 
     .gallery-container {
-      max-width: 1200px;
-      margin: 0 auto;
+      padding: 10px;
     }
 
     /* 갤러리 네비게이션 */
     .gallery-nav {
+      margin: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 20px;
+      font-weight: 600;
     }
 
     .nav-btn {
@@ -262,7 +263,6 @@ main {
       border-radius: 50%;
       width: 40px;
       height: 40px;
-      font-size: 18px;
       cursor: pointer;
       transition: background-color 0.3s;
     }
@@ -357,7 +357,7 @@ main {
       font-size: 24px;
       padding: 15px;
       cursor: pointer;
-      border-radius: 50%;
+      border-radius: 15px;
       transition: background-color 0.3s;
     }
 
