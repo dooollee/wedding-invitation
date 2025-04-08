@@ -23,7 +23,6 @@
     /> -->
     <script src="./js/countDown.js"></script>
     <script src="./js/show.js"></script>
-    <script src="./js/modal.js"></script>
     <script src="./js/account.js"></script>
     <script src="./js/music.js"></script>
     <script src="./js/img.js"></script>
@@ -43,7 +42,7 @@
       <!-- 배경음악 -->
       <audio id="bgMusic" loop>
         <!-- 음악 파일 경로를 여기에 추가하세요 -->
-        <source src="./src/music/man_to_women.mp3" type="audio/mpeg">
+        <source src="./src/music/after_dark.mp3" type="audio/mpeg">
         브라우저가 오디오 요소를 지원하지 않습니다.
       </audio>
       <header>
@@ -239,13 +238,7 @@
                 <img class="rotate-icon" src="./src/icon/down.svg" alt="계좌번호보기" />
               </button>
               <div id="groom-accounts" class="account-details">
-                <div class="account-item">
-                  <div class="account-info">
-                    신랑 <strong>이현빈</strong> | 15717760201013 | 기업은행
-                  </div>
-                  <button class="copy-btn" onclick="copyToClipboard('15717760201013', this)">복사</button>
-                </div>
-                
+
                 <div class="account-item">
                   <div class="account-info">
                    아버지 <strong>이상경</strong> | 3827100613890 | 새마을금고
@@ -259,6 +252,13 @@
                   </div>
                   <button class="copy-btn" onclick="copyToClipboard('1002-333-444555', this)">복사</button>
                 </div>
+
+                <div class="account-item">
+                  <div class="account-info">
+                    신랑 <strong>이현빈</strong> | 15717760201013 | 기업은행
+                  </div>
+                  <button class="copy-btn" onclick="copyToClipboard('15717760201013', this)">복사</button>
+                </div>
               </div>
             </div>
             
@@ -268,12 +268,6 @@
                 <img class="rotate-icon" src="./src/icon/down.svg" alt="계좌번호보기" />
               </button>
               <div id="bride-accounts" class="account-details">
-                <div class="account-item">
-                  <div class="account-info">
-                    신부 <strong>이한이</strong> | 3333222775604 | 카카오뱅크
-                  </div>
-                  <button class="copy-btn" onclick="copyToClipboard('3333222775604 ', this)">복사</button>
-                </div>
                 
                 <div class="account-item">
                   <div class="account-info">
@@ -287,6 +281,13 @@
                     어머니 <strong>한숙현</strong> | 3333274697763 | 카카오뱅크
                   </div>
                   <button class="copy-btn" onclick="copyToClipboard('010-5555-6666-77', this)">복사</button>
+                </div>
+
+                <div class="account-item">
+                  <div class="account-info">
+                    신부 <strong>이한이</strong> | 3333222775604 | 카카오뱅크
+                  </div>
+                  <button class="copy-btn" onclick="copyToClipboard('3333222775604 ', this)">복사</button>
                 </div>
               </div>
             </div>
@@ -314,7 +315,7 @@
             	new daum.roughmap.Lander({
             		"timestamp" : "1740811753772",
             		"key" : "2n7p3",
-            		"mapWidth" : "360",
+            		"mapWidth" : "380",
             		"mapHeight" : "360"
             	}).render();
             </script>

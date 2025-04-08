@@ -96,7 +96,7 @@ body {
 
 header {
   .card {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     background: #ece3c0;
 
     .wedding-day {
@@ -105,8 +105,9 @@ header {
       display: inline-block;
       position: absolute;
       inset: 25px 0;
-      font-size: 20px;
+      font-size: 24px;
       color: #ffd400;
+      text-shadow: 2px 2px 1px #5a4e41;
     }
 
     .intro {
@@ -115,7 +116,8 @@ header {
       display: flex;
       justify-content: space-between;
       padding-inline: 20px;
-      color: gray;
+      color: white;
+      text-shadow: 1px 1px 3px gray;
       font-size: 12px;
     }
 
@@ -130,11 +132,12 @@ header {
 
     .guide {
       margin-top: 15px;
-      font-family: "Cafe24ClassicType-Regular";
+      font-family: "RixYeoljeongdo_Regular";
       letter-spacing: 0.06rem;
-      background: linear-gradient(to right, black, gray, white);
+      color: #5a4e41;
+      /* background: linear-gradient(to right, black, gray, white);
       color: transparent;
-      -webkit-background-clip: text;
+      -webkit-background-clip: text; */
     }
   }
 
@@ -143,9 +146,10 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 800px;
-    padding: 160px 0;
-    gap: 40px;
+    padding: 100px 0;
+    gap: 50px;
     font-size: 14px;
+    line-height: 1.8rem;
 
     .word {
       color: #5a4e41;
@@ -174,15 +178,16 @@ header {
 
     .host {
       letter-spacing: 0.1rem;
+      line-height: 0.1rem;
     }
   }
 }
 
 main {
-  padding: 80px 0;
+  padding: 40px 0;
 
   .mainOne {
-    padding: 5rem 0;
+    padding: 40px 0;
 
     .title {
       margin-block: 30px;
@@ -244,7 +249,7 @@ main {
     }
 
     .gallery-container {
-      padding: 10px;
+      padding: 20px;
     }
 
     /* 갤러리 네비게이션 */
@@ -317,10 +322,7 @@ main {
 
     .modal-content {
       position: relative;
-      width: 90%;
-      max-width: 1200px;
       margin: 40px auto;
-      height: calc(100% - 80px);
       display: flex;
       flex-direction: column;
     }
@@ -330,7 +332,10 @@ main {
       right: 20px;
       top: 10px;
       font-size: 28px;
-      color: #fff;
+
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      color: white;
       cursor: pointer;
       z-index: 110;
     }
@@ -344,8 +349,8 @@ main {
     }
 
     #modal-image {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 400px;
+      /* max-height: 90%; */
       object-fit: contain;
     }
 
@@ -353,7 +358,7 @@ main {
       position: absolute;
       background: rgba(255, 255, 255, 0.2);
       border: none;
-      color: white;
+      color: black;
       font-size: 24px;
       padding: 15px;
       cursor: pointer;
@@ -458,7 +463,7 @@ main {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.7s ease; /* 더 느리게 설정 */
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .account-item.show {
