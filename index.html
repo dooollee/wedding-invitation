@@ -182,35 +182,37 @@
         <section class="mainTwo">
           <h2 class="show">gallery</h2>
             <div class="gallery-container">
-            <div class="gallery-header">
-              <h2 class="gallery-title">사진 갤러리</h2>
-              <div class="gallery-pagination">
-                <span id="current-page">1</span> / <span id="total-pages">3</span> 페이지
+                  
+              <!-- 갤러리 네비게이션 버튼 -->
+              <div class="gallery-nav">
+                  <button id="prev-page" class="nav-btn">&lt;</button>
+                  <div id="page-indicator"></div>
+                  <button id="next-page" class="nav-btn">&gt;</button>
               </div>
-            </div>
-            
-            <div class="gallery-content">
-              <button class="gallery-nav-button prev-button" aria-label="이전 페이지">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
               
+              <!-- 갤러리 그리드 -->
               <div class="gallery-grid" id="gallery-grid">
-                <!-- 이미지는 JavaScript에서 동적으로 추가됩니다 -->
+                  <!-- 사진들은 JavaScript에서 동적으로 추가됩니다 -->
               </div>
-              
-              <button class="gallery-nav-button next-button" aria-label="다음 페이지">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-            
-            <div class="gallery-indicators" id="indicators">
-              <!-- 인디케이터는 JavaScript에서 동적으로 추가됩니다 -->
-            </div>
           </div>
+        
+          <!-- 모달 창 (사진 확대 보기) -->
+          <div id="photo-modal" class="modal">
+              <div class="modal-content">
+                  <span class="close-btn">&times;</span>
+                  
+                  <div class="modal-image-container">
+                      <button class="modal-nav prev-btn">&lt;</button>
+                      <img id="modal-image" src="" alt="확대 이미지">
+                      <button class="modal-nav next-btn">&gt;</button>
+                  </div>
+                  
+                  <div class="modal-counter">
+                      <span id="current-image">1</span> / <span id="total-images">22</span>
+                  </div>
+              </div>
+          </div>
+        
           <!-- 예배 안내  -->
           <h2 class="show">information</h2>
           <div class="worship-info show">
