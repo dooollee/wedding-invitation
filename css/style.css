@@ -574,12 +574,24 @@ main {
   .howToCome {
     padding: 20px;
     font-size: 14px;
-    
+    line-height: 160%;
+
+    strong{
+      font-size: inherit;
+    }
+    h4{
+      margin: 10px;
+    }
+    img{
+      width: 14px;
+    }
+
     p{
       margin-block: 20px;
+      }
     }
   }
-}
+
 .copy-right {
   margin-top: 100px;
   height: 200px;
