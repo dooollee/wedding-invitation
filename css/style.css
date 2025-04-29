@@ -334,8 +334,10 @@ main {
       font-size: 28px;
 
       background: rgba(255, 255, 255, 0.2);
-      border-radius: 3px;
-      color: white;
+      border-radius: 50%;
+      width: 40px;
+      aspect-ratio: 1/1;
+      color: black;
       cursor: pointer;
       z-index: 110;
     }
@@ -362,7 +364,9 @@ main {
       font-size: 24px;
       padding: 15px;
       cursor: pointer;
-      border-radius: 15px;
+      border-radius: 50%;
+      width: 50px;
+      aspect-ratio: 1/1;
       transition: background-color 0.3s;
     }
 
