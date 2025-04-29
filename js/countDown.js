@@ -1,7 +1,7 @@
 //<디데이 계산기>
 
 // 목표 날짜 설정 (2025년 5월 31일 12:30분)
-const targetDate = new Date("2025-05-31T12:30:00");
+const targetDate = new Date("2025-05-31T12:00:00");
 
 // 카운트다운을 갱신하는 함수
 function updateCountdown() {

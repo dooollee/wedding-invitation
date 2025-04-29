@@ -1,5 +1,12 @@
 @import "./font.css";
 
+:root {
+  --primary-color: #dfd3c3;
+  --bg-color: var(--primary-color);
+  --container-color: white;
+  --text-color : #5a4e41;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +15,7 @@
 
 body {
   font-family: "GoWunBatang-Regular";
-  color: #5a4e41;
+  color: var(--text-color);
   h2 {
     margin-block: 10px;
     font-style: italic;
@@ -18,11 +25,7 @@ body {
   }
 }
 
-:root {
-  --primary-color: #ece3c0;
-  --bg-color: #ece3c0;
-  --container-color: white;
-}
+
 
 body {
   background-color: var(--bg-color);
@@ -97,26 +100,25 @@ body {
 header {
   .card {
     padding-bottom: 40px;
-    background: #ece3c0;
+    background: var(--bg-color);
 
     .wedding-day {
-      font-family: "PartialSansKR-Regular";
-      letter-spacing: 0.2rem;
+      font-family: "GoldenPlains";
+      letter-spacing: 1px;
+      line-height: 150%;
       display: inline-block;
       position: absolute;
       inset: 25px 0;
-      font-size: 24px;
-      color: #ffd400;
-      text-shadow: 2px 2px 1px #5a4e41;
+      font-size: 30px;
+      color: #dfd2c5;
+      text-shadow: 3px 3px 3px var(--text-color);
     }
 
     .intro {
-      font-family: "Cafe24ClassicType-Regular";
       text-align: left;
       display: flex;
       justify-content: space-between;
       padding-inline: 20px;
-      color: white;
       text-shadow: 1px 1px 3px gray;
       font-size: 12px;
     }
@@ -132,9 +134,8 @@ header {
 
     .guide {
       margin-top: 15px;
-      font-family: "RixYeoljeongdo_Regular";
       letter-spacing: 0.06rem;
-      color: #5a4e41;
+      text-shadow: 1px 1px 3px gray;
       /* background: linear-gradient(to right, black, gray, white);
       color: transparent;
       -webkit-background-clip: text; */
@@ -152,7 +153,6 @@ header {
     line-height: 1.8rem;
 
     .word {
-      color: #5a4e41;
       font-weight: 600;
     }
 
@@ -220,7 +220,7 @@ main {
       }
 
       .dDay {
-        background-color: #ece3c0;
+        background-color: var(--bg-color);
         border-radius: 50%;
         aspect-ratio: 1/1;
         object-fit: cover;
@@ -401,7 +401,7 @@ main {
   .worship-info {
     margin: 30px 10px;
     padding: 20px;
-    border: 1px solid #ece3c0;
+    border: 1px solid var(--primary-color);
 
     p {
       margin-block: 30px;
@@ -410,7 +410,7 @@ main {
     a {
       border: none;
       border-radius: 3px;
-      background-color: #ece3c0;
+      background-color: var(--primary-color);
       padding: 8px;
       font-size: 12px;
     }
@@ -419,8 +419,7 @@ main {
   .account {
     margin: 30px 10px;
     padding: 20px;
-    color: #5a4e41;
-    border: 1px solid #ece3c0;
+    border: 1px solid var(--primary-color);
     max-width: 500px;
 
     img {
@@ -430,7 +429,7 @@ main {
   }
 
   .toggle-btn {
-    background-color: #ece3c0; /* 베이지 버튼 색상 */
+    background-color: var(--primary-color); /* 베이지 버튼 색상 */
     color: #5a4e41;
     border: none;
     padding: 12px 15px;
@@ -488,7 +487,7 @@ main {
   }
 
   .copy-btn:hover {
-    background-color: #ece3c0;
+    background-color: var(--bg-color);
   }
 
   .copy-btn:active {
@@ -570,6 +569,15 @@ main {
 
   .map-from-internet {
     margin-block: 0.9375rem;
+  }
+
+  .howToCome {
+    padding: 20px;
+    font-size: 14px;
+    
+    p{
+      margin-block: 20px;
+    }
   }
 }
 .copy-right {

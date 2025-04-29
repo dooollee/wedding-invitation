@@ -40,3 +40,17 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Francisco";
+  src: url("../public/font/francisco/FranciscoDemo.otf")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GoldenPlains";
+  src: url("../public/font/GoldenPlains/Golden\ Plains\ -\ Demo.ttf")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

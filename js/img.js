@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // 갤러리 설정
   const imagesPerPage = 9;
-  const totalImages = 22;
+  const totalImages = 17;
   const totalPages = Math.ceil(totalImages / imagesPerPage);
 
   // 이미지 경로 (썸네일과 고화질 이미지)
