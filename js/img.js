@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // 이미지 데이터 초기화
   for (let i = 1; i <= totalImages; i++) {
     images.push({
-      thumbnail: `../src/file/${i}.webp`, // 저화질 썸네일 경로
-      highRes: `../src/webp/${i}.webp`, // 고화질 이미지 경로
+      thumbnail: `../src/thumbnail/${i}.webp`, // 저화질 썸네일 경로
+      highRes: `../src/photo/${i}.webp`, // 고화질 이미지 경로
     });
   }
 

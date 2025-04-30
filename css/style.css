@@ -110,7 +110,8 @@ header {
       position: absolute;
       inset: 25px 0;
       font-size: 30px;
-      color: #dfd2c5;
+      /* color: #f1f7e8; */
+      color: #ecd1b5;
       text-shadow: 3px 3px 3px var(--text-color);
     }
 
