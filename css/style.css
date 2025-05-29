@@ -482,7 +482,7 @@ main {
   }
 
   .copy-btn {
-    background-color: #f5edd6;
+    background-color: var(--primary-color);
     color: #5a4e41;
     border: none;
     padding: 5px 10px;
